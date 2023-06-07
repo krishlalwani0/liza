@@ -1,0 +1,296 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;1,200;1,300;1,400&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+nav{
+  background: black;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+nav .mainMenu {
+
+  display: flex;
+  list-style: none;
+}
+nav .mainMenu li a {
+  display: inline-block;
+  padding: 15px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: white;
+  font-size: 18px;
+  transition: 0.2s ease;
+}
+nav .mainMenu li a:hover {
+  background: rgb(255, 0, 0);
+}
+nav .openMenu{
+  font-size: 2rem;
+  margin: 20px;
+  display: none;
+  cursor: pointer;
+}
+@media(max-width: 800px){
+  nav .mainMenu{
+    height: 100vh;
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    z-index: 10;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: black;
+    transition: top 1s ease 0s;
+    display: none;
+  }
+  nav .mainMenu .closeMenu {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+  nav .openMenu{
+    display: block;
+  }
+  nav .mainMenu li a:hover{
+    background: none;
+    color: rgb(255,0,0);
+  }
+}
+nav .logo {
+  margin: 6px;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+header{
+  background: linear-gradient(45deg, black, #228388);
+  padding: 3.5rem;
+  text-align: center;
+}
+header h2 {
+  text-align: center;
+  display: inline;
+  font-size: 1.7rem;
+}
+#white{
+  color: white;
+}
+#white:hover {
+  color: red;
+}
+.red{
+  color: red;
+}
+body {
+  background: #222222;
+}
+.space {
+  background: white;
+  padding: 0.2rem;
+}
+#intro{
+  text-align: center;
+  padding: 1rem;
+}
+#intro h4{
+  text-align: center;
+  font-size: 1rem;
+  display: inline;
+}
+#pink{
+  color: #ff15d3;
+}
+.green{
+  color: #71ff15;
+}
+#lil-blue {
+  color: #55adff;
+}
+.red{
+  color: #ff000c;
+}
+.white{
+  color: white;
+}
+#button{
+  text-align: center;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+}
+#button a{
+  text-decoration: none;
+  text-align: center;
+  color: white;
+  font-size: 1.5rem;
+  background: red;
+  padding: 0.5rem 2rem;
+  border-radius: 15px;
+}
+#button a:hover{
+  color: red;
+  background: white;
+}
+#main img{
+  margin: 1rem;
+  --f: 0.1;
+  --r: 10px;
+  --_f: calc(100% * var(--f) / (1 + var(--f)));
+  --_a: calc(90deg * var(--f));
+  width: 200px;
+  aspect-ratio: calc(1 + var(--f));
+  object-fit: cover;
+  clip-path: inset(0 var(--_f) 0 0 round var(--_r));
+  transform: perspective(400px) var(--_t, rotateY(var(--_a)));
+  transition: 0.5s;
+  cursor: pointer;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 2rem;
+  
+}
+#main img:hover{
+  clip-path: inset(0 0 0 var(--_f) round var(--r));
+  --_t: translateX(calc(-1 * var(--_f))) rotateY(calc(-1 * var(--_a)));
+}
+#creator {
+  background: white;
+  margin: 3rem;
+  text-align: center;
+  padding: 1rem;
+}
+#creator h3{
+  color: red;
+  margin-bottom: 0.5rem;
+}
+#creator h4{
+  display: flex;
+}
+#working{
+  background: linear-gradient(30deg, #5f001b, #000000);
+  padding: 1rem;
+  text-align: center;
+}
+.com{
+  background: white;
+  margin: 2rem;
+  padding: 1rem;
+}
+.com .red{ 
+  margin-bottom: 0.6rem;
+}
+.black{
+  color: black;
+  text-align: center;
+}
+#joker{
+  background: linear-gradient(40deg, #37692b, #000000);
+  text-align: center;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-bottom: 2rem;
+  padding-top: 2rem;
+}
+#joker h2{
+  color: white;
+}
+#joker h4{
+  display: inline;
+  text-align: center;
+}
+#platforms h2, h4{
+  text-align: center;
+}
+.redirect{
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  background: black;
+  color: #52ff00;
+  border-radius: 12px;
+  padding: 1rem;
+  font-size: 1.3rem;
+  margin: 1rem 5rem;
+}  
+footer h2{
+  text-align: center;
+}
+#lastline{
+  color: white;
+  background: red;
+  text-align: center;
+  padding: 0.8rem;
+  font-size: 1.2rem;
+}
+#lastline:hover{
+  color: red;
+  background: white;
+  font-size: 1.2rem;
+}
+#effect{
+  margin-bottom: 0.8rem;
+  opacity: 0;
+}
+#effect:hover{
+  opacity: 100;
+}
+.cube-main{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 50vh;
+}
+.cube{
+  position: relative;
+  transform-style: preserve-3d;
+  width: 150px;
+  height: 150px;
+  transform: rotateX(-30deg);
+  animation: animate 6s linear infinite;
+}
+@keyframes animate {
+  0%{
+    transform: rotateX(-30deg) rotateY(0deg);
+  }
+  100%{
+    transform: rotateX(-30deg) rotateY(360deg);
+  }
+}
+.cube-2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+}
+.cube-2 span{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(#000, #00ec00);
+  transform: rotateY(calc(90deg * var(--i))) translateZ(75px);
+  
+}
+.cube-2 span:hover{
+  background: linear-gradient(#000, #ff000c);
+}
+.top-cube{
+  position: absolute;
+  background: #000;
+  width: 150px;
+  height: 150px;
+  top: 0;
+  left: 0;
+  transform: rotateX(90deg) translateZ(75px);
+}
